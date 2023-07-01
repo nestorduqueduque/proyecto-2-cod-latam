@@ -1,0 +1,288 @@
+:root{
+    --negro: #151515;
+    --grisoscuro: #242424;
+    --grisclaro: #D9D9D9;
+    --blanco: #ffff;
+    --primario:#0E8388;
+    --secundario : #2E4F4F;
+    --terciario: #2C3333;
+}
+
+/*Globales*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+  
+}
+
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    
+    
+}
+
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--blanco);
+}
+
+
+h1{
+    font-size: 5rem;
+
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+p{
+    font-size: 1.8rem;
+}
+
+button{
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    width: 200px;
+    height: 60px;
+    background-color: var(--blanco);
+    color: var(--negro);
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+.no-scroll {
+    overflow: hidden;
+  }
+
+.hidden {
+    visibility: hidden;
+  }
+
+  
+.contenedor{
+    max-width: 412px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+}
+
+
+/*Barra Navegacion*/
+.navegacion{
+   position: absolute;
+   top: 100px;
+   left: 0;
+   background-color: var(--grisoscuro);
+   color: var(--negro);
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: auto;
+   transform: translateX(-100%);
+   transition: 0.3s ease all;
+}
+
+.navegacion a{
+    text-align: center;
+}
+
+
+.nav-toggle{
+    position: absolute;
+    margin-left: 360px;
+    margin-top: -120px;
+    display: flex !important;
+    flex-direction: column;
+}
+
+.nav-toggle span{
+    width: 30px;    
+    height: 4px;
+    background: var(--blanco);
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+}
+
+
+.navegacion__enlace:hover{
+    color: var(--primario);
+}
+
+.close span{
+    transform: rotate(45deg) translate(0px, 0px);
+
+}
+
+.close span:nth-child(2){
+    display: none;
+}
+
+.close span:nth-child(3){
+    transform: rotate(-45deg) translate(-5px, 1px);
+}
+
+.open{transform: translateX(0) !important}
+
+
+/*Sobre mi*/
+.sobremi{
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    
+}
+
+.perfil-boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding-bottom: 3rem;
+}
+
+/*Habilidades*/
+.seccion-habilidades{
+    background-color: var(--secundario);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    text-align:center;
+    
+}
+
+/*Proyectos*/
+.seccion-proyectos{
+    background-color: var(--terciario);
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.portafolio-imagenes img{
+    width: 300px;
+}
+
+/*Contacto*/
+.seccion-contacto{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color:var(--primario);
+}
+
+.seccion-contacto img{
+    width: 20px;
+}
+
+
+.iconos{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+/*Footer*/
+
+footer{
+    
+    height: 5rem;
+    text-align: center;
+}
+
+/*Media Queries*/
+/*Tablet*/
+@media (min-width: 768px) {
+    .contenedor{
+        max-width: 768px;
+        margin-left: 7rem;
+        margin-right: 7rem;
+}
+.nav-toggle{
+    position: absolute;
+    margin-left: 650px;
+    margin-top: -70px;
+}
+
+.portafolio-imagenes img{
+    width: 400px;
+}
+/*Desktop*/
+@media (min-width: 1024px) {
+    h1{
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+    .contenedor{
+        max-width: 1200px;
+        margin-left: 12rem;
+        margin-right: 12rem;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0;
+    
+    }
+        
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+       
+        gap: 2rem;
+    }
+    .nav-toggle{
+        position: absolute;
+        margin-left: 700px;
+        margin-top: 0px;
+    }
+    .nav-toggle{
+        display: none;
+    }
+
+    .habilidades-texto{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        margin-top: 50px;
+        color: var(--grisclaro);
+        margin-bottom: 100px;
+    }
+
+    .seccion-habilidades{
+        margin-top: 5rem;
+        background-color: var(--secundario);
+        height: 50rem;
+    }
+
+    .contenedor-proyectos_imagen{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-bottom: 100px;
+    }
+
+    .contenedor-proyectos img{
+        max-width: 90%;
+    }
