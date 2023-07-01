@@ -154,6 +154,12 @@ button:hover{
     
 }
 
+.perfil-imagen img{
+    max-width: 350px;
+    border-radius: 100%;
+    margin-right: 40px;
+}
+
 .perfil-boton{
     display: flex;
     justify-content: center;
@@ -222,6 +228,13 @@ footer{
     margin-top: -70px;
 }
 
+.perfil-imagen img{
+    max-width: 300px;
+    border-radius: 100%;
+    margin-left: 100px;
+    
+}
+
 .portafolio-imagenes img{
     width: 400px;
 }
@@ -261,6 +274,13 @@ footer{
     }
     .nav-toggle{
         display: none;
+    }
+
+    .perfil-imagen img{
+        max-width: 300px;
+        border-radius: 100%;
+        margin-left: 250px;
+        
     }
 
     .habilidades-texto{
